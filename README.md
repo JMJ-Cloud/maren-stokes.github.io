@@ -4,8 +4,8 @@ A warm, friendly portfolio website showcasing academics, leadership, and STEM in
 
 ## 🎨 Design
 
-- **Color Palette:** Warm pastels with soft yellows, light pinks, and peach accents
-- **Typography:** Nunito for headings, Inter for body text
+- **Color Palette:** Warm nature theme with honey yellow, sage green, and blush pink accents
+- **Typography:** Playfair Display for headings, DM Sans for body text
 - **Style:** Rounded corners, soft shadows, generous white space
 
 ## 📁 Project Structure
@@ -53,12 +53,12 @@ This site is configured to automatically deploy to GitHub Pages via GitHub Actio
 4. Push your code to the `main` branch
 5. The site will automatically build and deploy
 
-The site will be available at: `https://maren-stokes.github.io`
+The site will be available at: `https://jmj-cloud.github.io/maren-stokes.github.io/`
 
 ## 🛠️ Built With
 
 - [Astro](https://astro.build) - Static site framework
-- Google Fonts (Nunito & Inter)
+- Google Fonts (Playfair Display & DM Sans)
 - CSS Grid & Flexbox for layouts
 - GitHub Actions for CI/CD
 
