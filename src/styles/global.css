@@ -1,0 +1,348 @@
+/* ================================
+   MARÉN'S WARM NATURE THEME
+   Soft, comforting, STEM-friendly
+   ================================ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+/* -------- Color Tokens -------- */
+:root {
+  /* Neutrals / background */
+  --bg-paper: #F5E6C8;         /* warm beige, paper-like */
+  --bg-paper-deep: #E9D3AC;    /* slightly deeper tan */
+  --bg-cream: #FFF2D3;         /* soft cream sections */
+
+  /* Primary accents */
+  --accent-honey: #E3B44A;     /* honey yellow */
+  --accent-honey-deep: #C89632;
+
+  /* Floral pinks / peaches */
+  --accent-blush: #F4A7A7;     /* dusty pink */
+  --accent-blush-deep: #E28C8C;
+  --accent-peach: #F6B78C;
+
+  /* Greens */
+  --accent-sage: #A7C7A1;      /* soft sage */
+  --accent-leaf: #6B8F6F;      /* deeper leaf green */
+
+  /* Text colors */
+  --text-main: #5B4634;        /* dark brown text */
+  --text-soft: #7B6654;        /* softer body */
+  --text-muted: #A28B74;
+
+  /* Shadows / lines */
+  --shadow-soft: 0 8px 18px rgba(91, 70, 52, 0.12);
+  --border-soft: 1px solid rgba(91, 70, 52, 0.08);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  /* Spacing scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 200ms ease-in-out;
+  --transition-slow: 300ms ease-in-out;
+
+  /* Legacy variable aliases for component compatibility */
+  --spacing-xs: var(--space-xs);
+  --spacing-sm: var(--space-sm);
+  --spacing-md: var(--space-md);
+  --spacing-lg: var(--space-lg);
+  --spacing-xl: var(--space-xl);
+  --spacing-2xl: var(--space-2xl);
+  --spacing-3xl: var(--space-3xl);
+
+  --color-text: var(--text-soft);
+  --color-text-light: var(--text-muted);
+  --color-text-dark: var(--text-main);
+  --color-bg: var(--bg-paper);
+  --color-bg-alt: var(--bg-cream);
+  --color-white: #FFFFFF;
+  --color-accent: var(--accent-honey);
+  --color-primary: var(--bg-cream);
+  --color-secondary: var(--accent-blush);
+
+  --shadow-sm: var(--shadow-soft);
+  --shadow-md: 0 12px 24px rgba(91, 70, 52, 0.1);
+  --shadow-lg: 0 16px 32px rgba(91, 70, 52, 0.15);
+}
+
+/* -------- Base Styles -------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  color: var(--text-main);
+  background: radial-gradient(circle at top left, #F7EED6 0%, var(--bg-paper) 50%) fixed;
+  line-height: 1.6;
+}
+
+/* -------- Typography -------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-main);
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.4rem;
+  letter-spacing: 0.03em;
+  margin-bottom: var(--space-md);
+}
+
+h2 {
+  font-size: 1.85rem;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-md);
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+h4 {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-sm);
+}
+
+h5 {
+  font-size: 1rem;
+  margin-bottom: var(--space-sm);
+}
+
+h6 {
+  font-size: 0.9rem;
+  margin-bottom: var(--space-sm);
+}
+
+p {
+  margin: 0 0 var(--space-md);
+  color: var(--text-soft);
+}
+
+a {
+  color: var(--accent-leaf);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(107, 143, 111, 0.5);
+  transition: color var(--transition-base), border-color var(--transition-base);
+}
+
+a:hover {
+  color: var(--accent-honey-deep);
+  border-color: rgba(227, 180, 74, 0.7);
+}
+
+/* Small "handwritten" accent text */
+.note {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* -------- Utility Classes -------- */
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Spacing utilities */
+.mt-sm { margin-top: var(--space-sm); }
+.mt-md { margin-top: var(--space-md); }
+.mt-lg { margin-top: var(--space-lg); }
+.mt-xl { margin-top: var(--space-xl); }
+.mt-2xl { margin-top: var(--space-2xl); }
+
+.mb-sm { margin-bottom: var(--space-sm); }
+.mb-md { margin-bottom: var(--space-md); }
+.mb-lg { margin-bottom: var(--space-lg); }
+.mb-xl { margin-bottom: var(--space-xl); }
+.mb-2xl { margin-bottom: var(--space-2xl); }
+
+/* -------- Section Blocks -------- */
+
+.section {
+  margin-top: var(--space-xl);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 242, 211, 0.7);
+  border: var(--border-soft);
+  box-shadow: 0 12px 32px rgba(91, 70, 52, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle "botanical" corner gradient */
+.section::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(167, 199, 161, 0.16) 0%, transparent 60%),
+    radial-gradient(circle at 100% 80%, rgba(244, 167, 167, 0.14) 0%, transparent 55%);
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* variant for STEM / projects section */
+.section-stem {
+  background: rgba(167, 199, 161, 0.12);
+}
+
+/* variant for coursework section */
+.section-coursework {
+  background: rgba(246, 183, 140, 0.12);
+}
+
+/* -------- Buttons -------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.95rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.1s ease, box-shadow 0.15s ease, background var(--transition-base);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--accent-honey);
+  color: #3f2d1d;
+  box-shadow: 0 8px 16px rgba(227, 180, 74, 0.4);
+}
+
+.btn-primary:hover {
+  background: var(--accent-honey-deep);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(227, 180, 74, 0.45);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--accent-leaf);
+  border: 1px solid rgba(107, 143, 111, 0.7);
+}
+
+.btn-outline:hover {
+  background: rgba(167, 199, 161, 0.12);
+}
+
+/* -------- Tags / Pills (for interests, topics) -------- */
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: var(--space-sm);
+}
+
+.tag {
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  background: rgba(244, 167, 167, 0.2);
+  color: var(--text-main);
+  border: 1px solid rgba(244, 167, 167, 0.4);
+}
+
+.tag.tag-green {
+  background: rgba(167, 199, 161, 0.25);
+  border-color: rgba(167, 199, 161, 0.55);
+}
+
+/* -------- "Notebook / Paper" accents -------- */
+
+/* subtle lined-paper style for a blockquote or reflection */
+.reflection {
+  background: repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.92),
+      rgba(255, 255, 255, 0.92) 22px,
+      rgba(233, 211, 172, 0.35) 23px
+    );
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  border: 1px solid rgba(163, 135, 105, 0.3);
+  box-shadow: var(--shadow-soft);
+  font-size: 0.95rem;
+}
+
+/* -------- Responsive Typography -------- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.875rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+}

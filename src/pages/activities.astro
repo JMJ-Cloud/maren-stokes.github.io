@@ -1,0 +1,340 @@
+---
+import Layout from '../components/Layout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+---
+
+<Layout
+  title="Activities & Leadership"
+  description="Maren Stokes' leadership roles and extracurricular activities, including NHI, Model UN, Math Honor Society, and Tennis."
+>
+  <div class="activities-page">
+    <SectionHeading
+      title="Activities & Leadership"
+      subtitle="Building skills through community, competition, and collaboration"
+    />
+
+    <div class="activities-content">
+      <section class="activity-section featured">
+        <div class="activity-header">
+          <h2 class="activity-title">National Hispanic Institute (NHI)</h2>
+          <span class="activity-badge">Leadership</span>
+        </div>
+
+        <div class="activity-body">
+          <div class="role-highlight">
+            <h3>Speaker of the House – 2025 LDZ</h3>
+            <p>
+              Leading parliamentary sessions and facilitating dialogue among peers in one
+              of NHI's most prestigious leadership roles.
+            </p>
+          </div>
+
+          <div class="achievements">
+            <h4>Achievements & Participation</h4>
+            <ul class="achievements-list">
+              <li>
+                <strong>Great Debate Participant (2024)</strong>
+                <ul class="sub-list">
+                  <li>Most Improved Award</li>
+                  <li>Placed in Extemporaneous Speaking</li>
+                </ul>
+              </li>
+              <li>Continuing participation through final eligible summer</li>
+            </ul>
+          </div>
+
+          <div class="skills-developed">
+            <h4>Skills Developed</h4>
+            <div class="skills-tags">
+              <span class="skill-tag">Leadership</span>
+              <span class="skill-tag">Persuasive Speaking</span>
+              <span class="skill-tag">Policy Awareness</span>
+              <span class="skill-tag">Collaboration</span>
+              <span class="skill-tag">Parliamentary Procedure</span>
+              <span class="skill-tag">Public Speaking</span>
+            </div>
+          </div>
+
+          <p class="activity-description">
+            NHI has been transformative in developing my leadership voice and teaching me
+            how to create spaces where people can think critically, debate respectfully,
+            and grow together. The experience has strengthened my ability to communicate
+            complex ideas clearly and lead with confidence.
+          </p>
+        </div>
+      </section>
+
+      <section class="activity-section">
+        <div class="activity-header">
+          <h2 class="activity-title">Math Honor Society</h2>
+          <span class="activity-badge">Academic</span>
+        </div>
+
+        <div class="activity-body">
+          <p class="activity-description">
+            Participation in a collaborative math community and opportunities for enrichment
+            and leadership. Engaging with peers who share a passion for mathematical thinking
+            and problem-solving.
+          </p>
+
+          <div class="skills-developed">
+            <h4>Skills Developed</h4>
+            <div class="skills-tags">
+              <span class="skill-tag">Collaborative Problem Solving</span>
+              <span class="skill-tag">Mathematical Reasoning</span>
+              <span class="skill-tag">Peer Leadership</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="activity-section">
+        <div class="activity-header">
+          <h2 class="activity-title">Model United Nations</h2>
+          <span class="activity-badge">Debate & Policy</span>
+        </div>
+
+        <div class="activity-body">
+          <p class="activity-description">
+            Developing research skills, negotiation, diplomacy, and confident public speaking
+            through simulated international relations scenarios. Model UN challenges me to
+            think globally, understand diverse perspectives, and craft solutions to complex
+            international issues.
+          </p>
+
+          <div class="skills-developed">
+            <h4>Skills Developed</h4>
+            <div class="skills-tags">
+              <span class="skill-tag">Research & Analysis</span>
+              <span class="skill-tag">Negotiation</span>
+              <span class="skill-tag">Diplomacy</span>
+              <span class="skill-tag">Public Speaking</span>
+              <span class="skill-tag">Global Awareness</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="activity-section">
+        <div class="activity-header">
+          <h2 class="activity-title">Tennis</h2>
+          <span class="activity-badge">Athletics</span>
+        </div>
+
+        <div class="activity-body">
+          <p class="activity-description">
+            Building discipline, resilience, teamwork, and commitment on and off the court.
+            Tennis has taught me the importance of mental toughness, strategic thinking,
+            and maintaining composure under pressure — skills that translate directly to
+            academic and leadership challenges.
+          </p>
+
+          <div class="skills-developed">
+            <h4>Skills Developed</h4>
+            <div class="skills-tags">
+              <span class="skill-tag">Discipline</span>
+              <span class="skill-tag">Resilience</span>
+              <span class="skill-tag">Strategic Thinking</span>
+              <span class="skill-tag">Mental Toughness</span>
+              <span class="skill-tag">Teamwork</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .activities-page {
+    max-width: 900px;
+  }
+
+  .activities-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2xl);
+  }
+
+  .activity-section {
+    background-color: var(--color-white);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-2xl);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(74, 74, 74, 0.08);
+    transition: all var(--transition-base);
+  }
+
+  .activity-section:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  .activity-section.featured {
+    border: 2px solid var(--color-accent);
+    background: linear-gradient(135deg, var(--color-white) 0%, var(--color-bg) 100%);
+  }
+
+  .activity-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .activity-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    font-weight: 800;
+    color: var(--color-text-dark);
+    margin: 0;
+  }
+
+  .activity-badge {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: var(--color-primary);
+    color: var(--color-text-dark);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    border-radius: var(--radius-md);
+  }
+
+  .activity-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+
+  .role-highlight {
+    background-color: var(--color-bg-alt);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--color-accent);
+  }
+
+  .role-highlight h3 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .role-highlight p {
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--color-text);
+    margin: 0;
+  }
+
+  .achievements h4,
+  .skills-developed h4 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .achievements-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .achievements-list > li {
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    padding-left: var(--spacing-lg);
+    position: relative;
+  }
+
+  .achievements-list > li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .achievements-list strong {
+    color: var(--color-text-dark);
+    font-weight: 600;
+  }
+
+  .sub-list {
+    list-style: none;
+    margin-top: var(--spacing-sm);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .sub-list li {
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    padding-left: var(--spacing-md);
+    position: relative;
+  }
+
+  .sub-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+  }
+
+  .skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+  }
+
+  .skill-tag {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-bg-alt);
+    color: var(--color-text-dark);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(74, 74, 74, 0.1);
+  }
+
+  .activity-description {
+    font-size: var(--font-size-base);
+    line-height: 1.7;
+    color: var(--color-text);
+    margin: 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .activity-section {
+      padding: var(--spacing-lg);
+    }
+
+    .activity-title {
+      font-size: var(--font-size-xl);
+    }
+
+    .activity-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .role-highlight {
+      padding: var(--spacing-md);
+    }
+
+    .role-highlight h3 {
+      font-size: var(--font-size-lg);
+    }
+  }
+</style>

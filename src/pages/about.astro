@@ -1,0 +1,254 @@
+---
+import Layout from '../components/Layout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+---
+
+<Layout
+  title="About"
+  description="Learn more about Maren Stokes - her journey in STEM, leadership, and continuous learning."
+>
+  <div class="about-page">
+    <SectionHeading
+      title="About Me"
+      subtitle="My journey through STEM, leadership, and continuous learning"
+    />
+
+    <div class="about-content">
+      <section class="bio-section">
+        <p class="lead">
+          Ever since I was introduced to STEM at a young age, I've been driven by curiosity.
+          I started coding in <strong>fourth grade</strong>, and what began as simple experimentation
+          eventually grew into a deeper love for <strong>machine learning, math, and physics</strong>.
+          Over time, I've become especially interested in how theoretical thinking and technical
+          problem-solving connect to real-world impact.
+        </p>
+
+        <p>
+          I've had the chance to continue that journey through <strong>UT Austin Computer Science
+          machine learning summer programs</strong>, advanced coursework, and independent exploration.
+          At the same time, my experiences in <strong>leadership, debate, and civic engagement</strong>
+          have helped me grow not just as a student, but as someone who values community,
+          responsibility, and voice.
+        </p>
+
+        <p>
+          I love learning, improving, and staying open to wherever curiosity leads — whether that's
+          understanding complex systems in physics, developing smarter technology, or working where
+          STEM and leadership intersect.
+        </p>
+      </section>
+
+      <section class="values-section">
+        <h3 class="subsection-title">What Drives Me</h3>
+
+        <div class="values-grid">
+          <div class="value-item">
+            <h4>Curiosity</h4>
+            <p>
+              A constant desire to understand how things work, from the mathematical structures
+              that govern our universe to the intelligent systems we're building for the future.
+            </p>
+          </div>
+
+          <div class="value-item">
+            <h4>Growth</h4>
+            <p>
+              Challenging myself through rigorous coursework, competitive programs, and
+              leadership opportunities that push me beyond my comfort zone.
+            </p>
+          </div>
+
+          <div class="value-item">
+            <h4>Community</h4>
+            <p>
+              Building spaces where people can think, collaborate, and grow together —
+              whether through NHI, Math Honor Society, or Model UN.
+            </p>
+          </div>
+
+          <div class="value-item">
+            <h4>Impact</h4>
+            <p>
+              Connecting theoretical knowledge to real-world applications, making sure
+              what I learn can contribute to solving meaningful problems.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="interests-section">
+        <h3 class="subsection-title">Beyond the Classroom</h3>
+
+        <p>
+          While academics and STEM are central to my life, I also find fulfillment in:
+        </p>
+
+        <ul class="interests-list">
+          <li>
+            <strong>Public Speaking & Debate</strong> — Through NHI and Model UN,
+            developing confidence in presenting ideas and engaging in thoughtful discourse
+          </li>
+          <li>
+            <strong>Tennis</strong> — Building discipline, resilience, and the mental
+            toughness that comes from competitive athletics
+          </li>
+          <li>
+            <strong>Policy & Government</strong> — Understanding how systems work at a
+            civic level and how leadership shapes communities
+          </li>
+          <li>
+            <strong>Continuous Learning</strong> — Whether it's a new programming language,
+            a physics concept, or a leadership framework, I'm always exploring
+          </li>
+        </ul>
+      </section>
+
+      <section class="looking-forward">
+        <h3 class="subsection-title">Looking Forward</h3>
+
+        <p>
+          As I prepare for college and beyond, I'm excited to continue exploring the
+          intersection of mathematics, physics, and computer science. I'm particularly
+          interested in how machine learning and applied mathematics can help us better
+          understand complex systems and create meaningful technological advances.
+        </p>
+
+        <p>
+          I'm looking for opportunities to learn from brilliant people, contribute to
+          research that matters, and continue developing both my technical skills and
+          my ability to lead and communicate effectively.
+        </p>
+      </section>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .about-page {
+    max-width: 800px;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3xl);
+  }
+
+  .bio-section p {
+    font-size: var(--font-size-lg);
+    line-height: 1.7;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .bio-section .lead {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-dark);
+  }
+
+  .bio-section strong {
+    color: var(--color-text-dark);
+    font-weight: 600;
+  }
+
+  .subsection-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+  }
+
+  .value-item {
+    background-color: var(--color-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(74, 74, 74, 0.08);
+  }
+
+  .value-item h4 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .value-item p {
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--color-text);
+    margin: 0;
+  }
+
+  .interests-section p {
+    font-size: var(--font-size-lg);
+    line-height: 1.7;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .interests-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .interests-list li {
+    font-size: var(--font-size-base);
+    line-height: 1.7;
+    color: var(--color-text);
+    padding-left: var(--spacing-lg);
+    position: relative;
+  }
+
+  .interests-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .interests-list strong {
+    color: var(--color-text-dark);
+    font-weight: 600;
+  }
+
+  .looking-forward p {
+    font-size: var(--font-size-lg);
+    line-height: 1.7;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .bio-section .lead {
+      font-size: var(--font-size-lg);
+    }
+
+    .bio-section p,
+    .interests-section p,
+    .looking-forward p {
+      font-size: var(--font-size-base);
+    }
+
+    .values-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+    }
+
+    .value-item {
+      padding: var(--spacing-lg);
+    }
+  }
+</style>

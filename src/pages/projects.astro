@@ -1,0 +1,265 @@
+---
+import Layout from '../components/Layout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+---
+
+<Layout
+  title="STEM & Projects"
+  description="Maren Stokes' journey in coding, mathematics, physics, and machine learning."
+>
+  <div class="projects-page">
+    <SectionHeading
+      title="STEM & Projects"
+      subtitle="My journey through code, mathematics, and the pursuit of understanding"
+    />
+
+    <section class="journey-section">
+      <h2 class="section-title">Coding & STEM Journey</h2>
+      <div class="journey-content">
+        <p class="lead">
+          I've been coding since <strong>4th grade</strong>, and technology has always been
+          part of how I think and solve problems. What started as simple curiosity and
+          experimentation has grown into a deeper passion for understanding how we can use
+          computation and mathematics to explain and shape the world around us.
+        </p>
+
+        <p>
+          Over time, that early curiosity grew into a deeper interest in <strong>applied math,
+          physics, and machine learning</strong>, especially how abstract ideas explain
+          real-world systems. I love the challenge of taking theoretical concepts and finding
+          ways to apply them to solve meaningful problems.
+        </p>
+
+        <p>
+          Through advanced coursework at LASA, two summers at the <strong>UT Austin Computer
+          Science Machine Learning Camps</strong>, and countless hours of independent exploration,
+          I've developed not just technical skills, but a way of thinking — one that values
+          precision, creativity, and the connection between theory and practice.
+        </p>
+      </div>
+    </section>
+
+    <section class="interests-section">
+      <h2 class="section-title">Areas I'm Especially Interested In</h2>
+
+      <div class="interests-grid">
+        <div class="interest-card">
+          <div class="interest-icon">∑</div>
+          <h3>Applied Mathematics</h3>
+          <p>
+            Using mathematical frameworks to model complex systems, solve optimization problems,
+            and find elegant solutions to real-world challenges. I love the way math provides
+            a universal language for understanding patterns and structures.
+          </p>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon">⚛</div>
+          <h3>Physics & Understanding the Universe</h3>
+          <p>
+            Exploring the fundamental laws that govern our reality — from classical mechanics
+            to the behavior of complex systems. Physics has taught me to think rigorously and
+            see the world through a mathematical lens.
+          </p>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon">🤖</div>
+          <h3>Machine Learning & Intelligent Systems</h3>
+          <p>
+            Building systems that can learn, adapt, and make decisions. I'm fascinated by how
+            we can use algorithms and data to create intelligence, and how ML can be applied
+            to everything from scientific research to solving societal challenges.
+          </p>
+        </div>
+
+        <div class="interest-card">
+          <div class="interest-icon">🔬</div>
+          <h3>Connecting Theory to Real-World Impact</h3>
+          <p>
+            I'm driven by the intersection of theoretical understanding and practical application.
+            The most exciting work happens when abstract ideas become tools that make a
+            meaningful difference in the world.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="future-section">
+      <h2 class="section-title">Looking Ahead</h2>
+      <div class="future-content">
+        <p>
+          I'm continuing to build projects, explore deeply, and learn as much as I can —
+          especially as I prepare for college and beyond. My goal is to work at the
+          intersection of mathematics, physics, and computer science, contributing to
+          research and technology that pushes the boundaries of what's possible.
+        </p>
+
+        <div class="coming-soon">
+          <h3>Project Showcase Coming Soon</h3>
+          <p>
+            I'm currently working on documenting and showcasing projects that demonstrate
+            these interests. Check back soon to see examples of my work in machine learning,
+            computational modeling, and algorithmic problem-solving.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .projects-page {
+    max-width: 900px;
+  }
+
+  .section-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    font-weight: 800;
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .journey-section {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .journey-content {
+    max-width: 800px;
+  }
+
+  .journey-content p {
+    font-size: var(--font-size-lg);
+    line-height: 1.7;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .journey-content .lead {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-dark);
+  }
+
+  .journey-content strong {
+    color: var(--color-text-dark);
+    font-weight: 600;
+  }
+
+  .interests-section {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+  }
+
+  .interest-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(74, 74, 74, 0.08);
+    transition: all var(--transition-base);
+  }
+
+  .interest-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+  }
+
+  .interest-icon {
+    font-size: var(--font-size-4xl);
+    line-height: 1;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .interest-card h3 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .interest-card p {
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--color-text);
+    margin: 0;
+  }
+
+  .future-section {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .future-content {
+    max-width: 800px;
+  }
+
+  .future-content > p {
+    font-size: var(--font-size-lg);
+    line-height: 1.7;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .coming-soon {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+    text-align: center;
+  }
+
+  .coming-soon h3 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .coming-soon p {
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--color-text);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .journey-content .lead,
+    .future-content > p {
+      font-size: var(--font-size-lg);
+    }
+
+    .journey-content p {
+      font-size: var(--font-size-base);
+    }
+
+    .interests-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+    }
+
+    .interest-card {
+      padding: var(--spacing-lg);
+    }
+
+    .interest-icon {
+      font-size: var(--font-size-3xl);
+    }
+
+    .coming-soon {
+      padding: var(--spacing-xl);
+    }
+
+    .coming-soon h3 {
+      font-size: var(--font-size-xl);
+    }
+  }
+</style>

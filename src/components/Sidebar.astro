@@ -1,0 +1,154 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/academics', label: 'Academics' },
+  { href: '/activities', label: 'Activities' },
+  { href: '/projects', label: 'STEM & Projects' },
+  { href: '/contact', label: 'Contact' }
+];
+
+function isActive(href: string, currentPath: string): boolean {
+  if (href === '/') {
+    return currentPath === '/';
+  }
+  return currentPath.startsWith(href);
+}
+---
+
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <h2 class="sidebar-title">Maren Stokes</h2>
+  </div>
+
+  <nav class="sidebar-nav">
+    <ul class="nav-list">
+      {navItems.map((item) => (
+        <li class="nav-item">
+          <a
+            href={item.href}
+            class={`nav-link ${isActive(item.href, currentPath) ? 'active' : ''}`}
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</aside>
+
+<style>
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 280px;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    background: linear-gradient(
+      to bottom,
+      rgba(245, 230, 200, 0.95),
+      rgba(255, 242, 211, 0.92)
+    );
+    padding: var(--spacing-2xl) var(--spacing-xl);
+    overflow-y: auto;
+    border-right: var(--border-soft);
+  }
+
+  .sidebar-header {
+    margin-bottom: var(--spacing-2xl);
+    text-align: center;
+  }
+
+  .sidebar-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: var(--spacing-xs);
+    letter-spacing: 0.03em;
+  }
+
+  .sidebar-subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  .sidebar-nav {
+    margin-top: var(--spacing-xl);
+  }
+
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-item {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .nav-link {
+    display: block;
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-soft);
+    border-radius: 999px;
+    transition: all var(--transition-base);
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  .nav-link:hover {
+    background: rgba(252, 243, 221, 0.9);
+    color: var(--accent-leaf);
+    transform: translateX(4px);
+  }
+
+  .nav-link.active {
+    background: var(--accent-honey);
+    color: #3f2d1d;
+    font-weight: 600;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      border-right: none;
+      border-bottom: var(--border-soft);
+    }
+
+    .sidebar-header {
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .nav-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-sm);
+      justify-content: center;
+    }
+
+    .nav-item {
+      margin-bottom: 0;
+    }
+
+    .nav-link {
+      padding: var(--spacing-sm) var(--spacing-md);
+      font-size: var(--font-size-sm);
+    }
+
+    .nav-link:hover {
+      transform: none;
+    }
+  }
+</style>

@@ -1,0 +1,163 @@
+---
+import Layout from '../components/Layout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Maren Stokes">
+  <div class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Hi! I'm Maren Stokes</h1>
+      <p class="hero-description">
+        A student at the Liberal Arts and Science Academy in Austin, Texas with a passion for
+        <strong>math, physics, and computer science</strong>. I love exploring how things work —
+        whether that's through coding projects, problem solving, or diving deep into ideas about
+        how the universe is structured.
+      </p>
+      <p class="hero-description">
+        I'm also deeply involved in leadership and communication communities, especially through
+        the <strong>National Hispanic Institute</strong>, where I've developed a love for public
+        speaking, collaboration, and creating spaces for people to think and grow.
+      </p>
+    </div>
+  </div>
+
+  <section class="highlights">
+    <SectionHeading
+      title="What I'm About"
+      subtitle="A glimpse into my interests and journey"
+    />
+
+    <div class="cards-grid">
+      <Card
+        title="STEM Passion"
+        description="Coding since 4th grade, with deep interests in machine learning, applied math, and physics. I love connecting theoretical thinking to real-world impact."
+        href="/projects"
+      />
+
+      <Card
+        title="Leadership & Voice"
+        description="Speaker of the House at NHI's 2025 LDZ. Building skills in public speaking, collaboration, and creating spaces for growth and meaningful dialogue."
+        href="/activities"
+      />
+
+      <Card
+        title="Rigorous Learning"
+        description="Challenging myself through AP courses, UT Austin ML programs, and interdisciplinary thinking across STEM, humanities, and social sciences."
+        href="/academics"
+      />
+
+      <Card
+        title="Curiosity-Driven"
+        description="Always exploring, learning, and staying open to wherever curiosity leads — from understanding complex systems to developing smarter technology."
+        href="/about"
+      />
+    </div>
+  </section>
+
+  <section class="journey">
+    <SectionHeading
+      title="My Journey"
+      subtitle="This website is a place to share what I'm learning, building, and striving toward as I continue exploring STEM in college and beyond."
+    />
+
+    <div class="journey-content">
+      <p>
+        Ever since I was introduced to STEM at a young age, I've been driven by curiosity.
+        What began as simple experimentation eventually grew into a deeper love for machine learning,
+        mathematics, and physics. Over time, I've become especially interested in how theoretical
+        thinking and technical problem-solving connect to real-world impact.
+      </p>
+      <p>
+        At the same time, my experiences in leadership, debate, and civic engagement have helped me
+        grow not just as a student, but as someone who values community, responsibility, and voice.
+      </p>
+      <p>
+        I love learning, improving, and staying open to wherever curiosity leads.
+      </p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    margin-bottom: var(--spacing-3xl);
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .hero-content {
+    max-width: 800px;
+  }
+
+  .hero-title {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-5xl);
+    font-weight: 800;
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.1;
+  }
+
+  .hero-description {
+    font-size: var(--font-size-lg);
+    color: var(--color-text);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .hero-description strong {
+    color: var(--color-text-dark);
+    font-weight: 600;
+  }
+
+  .highlights {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+  }
+
+  .journey {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .journey-content {
+    max-width: 700px;
+  }
+
+  .journey-content p {
+    font-size: var(--font-size-lg);
+    color: var(--color-text);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .hero {
+      padding: var(--spacing-xl) 0;
+      margin-bottom: var(--spacing-2xl);
+    }
+
+    .hero-title {
+      font-size: var(--font-size-3xl);
+    }
+
+    .hero-description {
+      font-size: var(--font-size-base);
+    }
+
+    .cards-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+    }
+
+    .journey-content p {
+      font-size: var(--font-size-base);
+    }
+  }
+</style>
