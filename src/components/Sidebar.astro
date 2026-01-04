@@ -1,5 +1,6 @@
 ---
 const currentPath = Astro.url.pathname;
+const base = import.meta.env.BASE_URL;
 
 const navItems = [
   { href: '/', label: 'Home' },
@@ -10,11 +11,12 @@ const navItems = [
   { href: '/contact', label: 'Contact' }
 ];
 
-function isActive(href: string, currentPath: string): boolean {
+function isActive(href: string, currentPath: string, base: string): boolean {
+  const fullPath = href === '/' ? base : `${base}${href}`;
   if (href === '/') {
-    return currentPath === '/';
+    return currentPath === base || currentPath === `${base}/`;
   }
-  return currentPath.startsWith(href);
+  return currentPath.startsWith(fullPath);
 }
 ---
 
@@ -28,8 +30,8 @@ function isActive(href: string, currentPath: string): boolean {
       {navItems.map((item) => (
         <li class="nav-item">
           <a
-            href={item.href}
-            class={`nav-link ${isActive(item.href, currentPath) ? 'active' : ''}`}
+            href={item.href === '/' ? base : `${base}${item.href}`}
+            class={`nav-link ${isActive(item.href, currentPath, base) ? 'active' : ''}`}
           >
             {item.label}
           </a>

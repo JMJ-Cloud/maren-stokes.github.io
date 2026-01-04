@@ -7,10 +7,12 @@ interface Props {
 }
 
 const { title, description, emoji, href } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const fullHref = href ? `${base}${href}` : undefined;
 const Tag = href ? 'a' : 'div';
 ---
 
-<Tag class="card" href={href}>
+<Tag class="card" href={fullHref}>
   <div class="card-content">
     {emoji && <div class="card-emoji">{emoji}</div>}
     <h3 class="card-title">{title}</h3>
