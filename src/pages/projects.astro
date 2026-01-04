@@ -85,6 +85,143 @@ import SectionHeading from '../components/SectionHeading.astro';
       </div>
     </section>
 
+    <section class="project-showcase">
+      <h2 class="section-title">Recent Project: Building This Portfolio Website</h2>
+
+      <div class="project-card featured">
+        <div class="project-header">
+          <h3>Portfolio Website with AI-Assisted Development</h3>
+          <div class="project-meta">
+            <span class="tech-tag">Astro</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">GitHub Pages</span>
+            <span class="tech-tag">Claude AI</span>
+            <span class="date-tag">January 2026</span>
+          </div>
+        </div>
+
+        <div class="project-content">
+          <h4>Overview</h4>
+          <p>
+            I built this personal portfolio website as a hands-on project to showcase my work and learn
+            modern web development practices. The project combined technical implementation with design
+            thinking, using AI tools to accelerate development while maintaining creative control.
+          </p>
+
+          <h4>My Role & Process</h4>
+          <p><strong>Planning & Design:</strong></p>
+          <ul>
+            <li>Created a comprehensive website plan outlining structure, content, and design direction</li>
+            <li>Designed a warm, nature-inspired color palette contrasting typical "cold" STEM aesthetics</li>
+            <li>Chose soft pastels (honey yellow, sage green, blush pink) to create an approachable feel</li>
+            <li>Selected typography (Playfair Display + DM Sans) for elegance and readability</li>
+            <li>Organized content across 6 pages: Home, About, Academics, Activities, STEM & Projects, Contact</li>
+          </ul>
+
+          <p><strong>Development Decisions:</strong></p>
+          <ul>
+            <li>Selected Astro as the framework for its performance and simplicity</li>
+            <li>Chose GitHub Pages for free, reliable hosting</li>
+            <li>Designed reusable component architecture (Layout, Sidebar, Card, SectionHeading)</li>
+            <li>Provided detailed CSS theme specifications for consistent styling</li>
+            <li>Reviewed and approved all generated code before deployment</li>
+          </ul>
+
+          <p><strong>Collaboration with Claude Code:</strong></p>
+          <ul>
+            <li>Used Claude Code CLI to accelerate development with AI assistance</li>
+            <li>Provided detailed prompts and specifications for each feature</li>
+            <li>Reviewed generated components and pages for quality and accuracy</li>
+            <li>Iterated on design details (removed emojis, adjusted navigation, refined content)</li>
+            <li>Debugged deployment issues (GitHub Pages configuration, base path routing)</li>
+          </ul>
+
+          <h4>Technical Implementation</h4>
+          <p><strong>What Claude Built:</strong></p>
+          <ul>
+            <li>Initialized Astro project with proper folder structure</li>
+            <li>Implemented global CSS with design system (colors, typography, spacing)</li>
+            <li>Created Layout component with sidebar integration</li>
+            <li>Built Sidebar navigation with active page detection and base URL support</li>
+            <li>Developed reusable Card and SectionHeading components</li>
+            <li>Generated all 6 pages with provided content from source materials</li>
+            <li>Configured GitHub Actions workflow for automated deployment</li>
+            <li>Fixed routing issues for GitHub Pages project deployment</li>
+          </ul>
+
+          <p><strong>Technical Stack:</strong></p>
+          <ul>
+            <li><strong>Framework:</strong> Astro v5.16.6 (static site generation)</li>
+            <li><strong>Languages:</strong> TypeScript, HTML, CSS</li>
+            <li><strong>Fonts:</strong> Google Fonts (Playfair Display, DM Sans)</li>
+            <li><strong>Deployment:</strong> GitHub Actions → GitHub Pages</li>
+            <li><strong>Version Control:</strong> Git/GitHub</li>
+          </ul>
+
+          <h4>Key Features</h4>
+          <ul>
+            <li>Responsive design that works on desktop, tablet, and mobile</li>
+            <li>Fixed sidebar navigation with smooth transitions and active states</li>
+            <li>Warm, nature-inspired design system with botanical gradients</li>
+            <li>Reusable component architecture for maintainability</li>
+            <li>Automated deployment pipeline (push to main → auto-deploy)</li>
+            <li>SEO-friendly meta tags and semantic HTML</li>
+          </ul>
+
+          <h4>Challenges & Solutions</h4>
+          <p><strong>GitHub Pages Configuration:</strong></p>
+          <ul>
+            <li><em>Challenge:</em> Initial 404 errors due to incorrect base path configuration</li>
+            <li><em>Solution:</em> Configured Astro's base URL to match GitHub project page structure</li>
+            <li><em>Learning:</em> Understanding the difference between user pages and project pages on GitHub</li>
+          </ul>
+
+          <p><strong>Navigation Routing:</strong></p>
+          <ul>
+            <li><em>Challenge:</em> Links pointing to root domain instead of project subdirectory</li>
+            <li><em>Solution:</em> Updated Sidebar and Card components to use BASE_URL environment variable</li>
+            <li><em>Learning:</em> Importance of relative vs absolute paths in deployed applications</li>
+          </ul>
+
+          <p><strong>Design Iteration:</strong></p>
+          <ul>
+            <li><em>Challenge:</em> Initial design had unnecessary decorative elements</li>
+            <li><em>Solution:</em> Removed emojis, simplified contact page, cleaned up sidebar</li>
+            <li><em>Learning:</em> Less is more—focusing on content over decoration</li>
+          </ul>
+
+          <h4>What I Learned</h4>
+          <ul>
+            <li><strong>Modern Web Frameworks:</strong> Hands-on experience with Astro's component-based architecture</li>
+            <li><strong>Design Systems:</strong> Creating cohesive visual identities with CSS variables</li>
+            <li><strong>AI-Assisted Development:</strong> How to effectively collaborate with AI tools while maintaining creative control</li>
+            <li><strong>DevOps Basics:</strong> Setting up CI/CD pipelines with GitHub Actions</li>
+            <li><strong>Problem Solving:</strong> Debugging deployment issues and understanding web hosting configurations</li>
+            <li><strong>Project Management:</strong> Breaking down complex projects into manageable tasks</li>
+          </ul>
+
+          <h4>Reflection</h4>
+          <p>
+            This project taught me that effective use of AI tools isn't about letting them do all the work—it's
+            about clear communication, thoughtful planning, and maintaining creative vision. I provided the
+            direction, made all design decisions, and reviewed every line of code. Claude accelerated the
+            implementation, but the choices that make this site unique were mine.
+          </p>
+          <p>
+            Building this website reinforced my interest in the intersection of design and engineering. The
+            technical implementation matters, but so does creating an experience that feels warm, personal,
+            and authentic—something that reflects who I am beyond just my technical skills.
+          </p>
+
+          <div class="project-links">
+            <a href="https://github.com/JMJ-Cloud/maren-stokes.github.io" class="btn btn-outline" target="_blank" rel="noopener">
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="future-section">
       <h2 class="section-title">Looking Ahead</h2>
       <div class="future-content">
@@ -94,15 +231,6 @@ import SectionHeading from '../components/SectionHeading.astro';
           intersection of mathematics, physics, and computer science, contributing to
           research and technology that pushes the boundaries of what's possible.
         </p>
-
-        <div class="coming-soon">
-          <h3>Project Showcase Coming Soon</h3>
-          <p>
-            I'm currently working on documenting and showcasing projects that demonstrate
-            these interests. Check back soon to see examples of my work in machine learning,
-            computational modeling, and algorithmic problem-solving.
-          </p>
-        </div>
       </div>
     </section>
   </div>
@@ -192,6 +320,111 @@ import SectionHeading from '../components/SectionHeading.astro';
     margin: 0;
   }
 
+  /* Project Showcase */
+  .project-showcase {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .project-card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(74, 74, 74, 0.08);
+  }
+
+  .project-card.featured {
+    border: 2px solid var(--accent-honey);
+    background: linear-gradient(135deg, var(--color-white) 0%, rgba(255, 242, 211, 0.3) 100%);
+  }
+
+  .project-header {
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 2px solid var(--accent-honey);
+  }
+
+  .project-header h3 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: var(--space-md);
+  }
+
+  .project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    align-items: center;
+  }
+
+  .tech-tag {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-md);
+    background: var(--accent-sage);
+    color: var(--text-main);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    border-radius: 999px;
+  }
+
+  .date-tag {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-md);
+    background: var(--accent-blush);
+    color: var(--text-main);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    border-radius: 999px;
+  }
+
+  .project-content h4 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--text-main);
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .project-content p {
+    font-size: var(--font-size-base);
+    line-height: 1.7;
+    color: var(--text-soft);
+    margin-bottom: var(--space-md);
+  }
+
+  .project-content ul {
+    margin: var(--space-md) 0 var(--space-lg);
+    padding-left: var(--space-xl);
+  }
+
+  .project-content li {
+    font-size: var(--font-size-base);
+    line-height: 1.7;
+    color: var(--text-soft);
+    margin-bottom: var(--space-sm);
+  }
+
+  .project-content strong {
+    color: var(--text-main);
+    font-weight: 600;
+  }
+
+  .project-content em {
+    font-style: italic;
+    color: var(--text-main);
+  }
+
+  .project-links {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--border-soft);
+    display: flex;
+    gap: var(--space-md);
+  }
+
   .future-section {
     margin-bottom: var(--spacing-3xl);
   }
@@ -205,29 +438,6 @@ import SectionHeading from '../components/SectionHeading.astro';
     line-height: 1.7;
     color: var(--color-text);
     margin-bottom: var(--spacing-xl);
-  }
-
-  .coming-soon {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-    padding: var(--spacing-2xl);
-    border-radius: var(--radius-xl);
-    text-align: center;
-  }
-
-  .coming-soon h3 {
-    font-family: var(--font-heading);
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    color: var(--color-text-dark);
-    margin-bottom: var(--spacing-md);
-  }
-
-  .coming-soon p {
-    font-size: var(--font-size-base);
-    line-height: 1.6;
-    color: var(--color-text);
-    max-width: 600px;
-    margin: 0 auto;
   }
 
   /* Responsive */
@@ -254,12 +464,16 @@ import SectionHeading from '../components/SectionHeading.astro';
       font-size: var(--font-size-3xl);
     }
 
-    .coming-soon {
-      padding: var(--spacing-xl);
+    .project-card {
+      padding: var(--space-lg);
     }
 
-    .coming-soon h3 {
+    .project-header h3 {
       font-size: var(--font-size-xl);
+    }
+
+    .project-links {
+      flex-direction: column;
     }
   }
 </style>
